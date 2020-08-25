@@ -8,8 +8,6 @@
 using namespace std;
 
 class Funciones{
- private:
-   int n;
  public:
    long sumaIterativa(int n);
    long sumaRecursiva(int n);
