@@ -14,4 +14,4 @@ El algoritmo se manda a llamar así mismo n veces, por lo que su complejidad es 
 
 Análisis de complejidad temporal
 
-El algoritmo se manda a llamar así mismo 1 vez, por los que su complejidad es O(1) para el peor de los casos.
+El algoritmo se manda a llamar así mismo 1 vez, por lo que su complejidad es O(1) para el peor de los casos.
