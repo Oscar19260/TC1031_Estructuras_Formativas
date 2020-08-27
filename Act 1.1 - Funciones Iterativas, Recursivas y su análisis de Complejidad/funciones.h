@@ -9,6 +9,7 @@ using namespace std;
 
 class Funciones{
  public:
+   Funciones(){};
    long sumaIterativa(int n);
    long sumaRecursiva(int n);
    long sumaDirecta(int n);
@@ -24,10 +25,10 @@ long Funciones::sumaIterativa(int n){
 
 long Funciones::sumaRecursiva(int n){
   if(n <= 1){
-	 return n;
+    return n;
   }
-	else{
-	 return n+sumaRecursiva(n-1);
+  else{
+    return n+sumaRecursiva(n-1);
   }
 }
 
