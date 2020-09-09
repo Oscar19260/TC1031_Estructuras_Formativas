@@ -15,5 +15,5 @@ Análisis de complejidad temporal:
 El algoritmo recorre n pasos ya que usa un ciclo que va i = 0 hasta el tamaño del arreglo, por lo que su complejidad es O(n) para el peor de los casos.
 
 # busqBinaria
-Análisis de complejidad temporal
+Análisis de complejidad temporal:
 El algoritmo recorre 
