@@ -1,19 +1,19 @@
-#ordenaSeleccion
+# ordenaSeleccion
 
 Análisis de complejidad temporal
 
-#ordena Burbuja
+# ordena Burbuja
 
 Análisis de complejidad temporal
 
-#ordenaMerge
+# ordenaMerge
 
 Análisis de complejidad temporal
 
-#busqSecuencial
+# busqSecuencial
 
 Análisis de complejidad temporal
 
-#busqBinaria
+# busqBinaria
 
 Análisis de complejidad temporal
