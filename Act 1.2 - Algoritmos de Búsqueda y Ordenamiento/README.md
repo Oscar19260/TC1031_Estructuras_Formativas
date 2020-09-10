@@ -8,7 +8,7 @@ El algoritmo recorre n*n pasos ya que usa dos ciclos el primero va de i = 0 hast
 
 # ordenaMerge
 Análisis de complejidad temporal:
-El algoritmo recorre los pasos en subtipos, dividiendose a su vez generando una especie de arbol, por lo que su complejidad es de O(nlog(n)) para el peor de los casos.
+El algoritmo recorre los pasos en subgrupos, dividiendose a su vez generando una especie de arbol, por lo que su complejidad es de O(nlog(n)) para el peor de los casos.
 
 # busqSecuencial
 Análisis de complejidad temporal:
