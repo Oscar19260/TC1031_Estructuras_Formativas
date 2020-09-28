@@ -38,7 +38,6 @@ class List{
 		List();
 		List(const List<T>&) throw (OutOfMemory);
 		~List();
-
 		bool empty() const;
 		void addFirst(T) throw (OutOfMemory);
 		void add(T) throw (OutOfMemory);
@@ -120,10 +119,9 @@ T List<T>::find(T val) const {
 // Update /////////////////////////////////////////////
 template <class T>
 bool List<T>::update(int move, T val) {
-    int pos;
     Link<T> *p;
     p = head;
-    pos = 0;
+	int pos = 0;
     while(pos != move){
         p = p->next;
         pos++;
