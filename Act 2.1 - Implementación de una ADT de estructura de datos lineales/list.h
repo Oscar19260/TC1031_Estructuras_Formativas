@@ -42,7 +42,7 @@ class List{
 		void addFirst(T) throw (OutOfMemory);
 		void add(T) throw (OutOfMemory);
 		T find(T) const;
-		bool update(int, T);
+		void update(int, T);
 		T removeFirst() throw (NoSuchElement);
 		T remove(int) throw (IndexOutOfBounds);
 		std::string toString() const;	
@@ -118,7 +118,7 @@ T List<T>::find(T val) const {
 
 // Update /////////////////////////////////////////////
 template <class T>
-bool List<T>::update(int move, T val) {
+void List<T>::update(int move, T val) {
     Link<T> *p;
     p = head;
 	int pos = 0;
@@ -127,7 +127,6 @@ bool List<T>::update(int move, T val) {
         pos++;
     }
     p->value = val;
-    return true;
 }
 
 // Remove /////////////////////////////////////////////
