@@ -15,19 +15,19 @@ class DLink {
 		DLink<T> *previous;
 		DLink<T> *next;
 		DLink(T);
-		DLink(T, DLink<T>*);
+		DLink(T, DLink<T>*, DLink<T>*);
 		DLink(const DLink<T>&);
 		friend class DList<T>;
 };
 
 template <class T>
-DLink<T>::DLink(T val): value(val), next(0) {}
+DLink<T>::DLink(T val): value(val), previous(0), next(0) {}
 
 template <class T>
-DLink<T>::DLink(T val, DLink* nxt) : value(val), next(nxt) {}
+DLink<T>::DLink(T val, DLink *prev, DLink* nxt): value(val), previous(prev), next(nxt) {}
 
 template <class T>
-DLink<T>::DLink(const DLink<T> &source) : value(source.value), next(source.next) {}
+DLink<T>::DLink(const DLink<T> &source): value(source.value), previous(source.previous), next(source.next) {}
 
 // Clase DList //////////////////////////////////////////
 template <class T>
@@ -50,6 +50,7 @@ class DList{
 		T remove(int) throw (IndexOutOfBounds);
 		std::string toStringForward() const;
 		std::string toStringBackward() const;
+		// void operator= (const DList&) throw (OutOfMemory);
 }; 
 
 template <class T>
@@ -141,6 +142,7 @@ void DList<T>::update(int move, T val) {
     }
     p->value = val;
 }
+
 
 // Remove /////////////////////////////////////////////
 template <class T>
