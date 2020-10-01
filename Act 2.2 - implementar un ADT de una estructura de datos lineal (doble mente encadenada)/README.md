@@ -12,4 +12,4 @@ Análisis de complejidad temporal: El algoritmo recorre n pasos ya que usa un ci
 Análisis de complejidad temporal: El algoritmo recorre n pasos ya que usa un ciclo el que recorre toda la lista desde su inicio hasta la posición que busca para actualizar, por lo que su complejidad es O(n) para el peor de los casos.
 
 ## remove
-Análisis de complejidad temporal: El algoritmo se coloca en la posición para eliminar el elemento, por lo que su complejidad es O(1) para el peor de los casos.
+Análisis de complejidad temporal: El algoritmo se coloca mueve por la lista hasta la posición para eliminar el elemento, por lo que su complejidad es O(n) para el peor de los casos.
