@@ -45,7 +45,7 @@ class DList{
 		void addFirst(T) throw (OutOfMemory);
 		void add(T) throw (OutOfMemory);
 		T find(T) const;
-		void update(int, T);
+		bool update(int, T);
 		T removeFirst() throw (NoSuchElement);
 		T remove(int) throw (IndexOutOfBounds);
 		std::string toStringForward() const;
@@ -132,7 +132,7 @@ T DList<T>::find(T val) const {
 
 // Update /////////////////////////////////////////////
 template <class T>
-void DList<T>::update(int move, T val) {
+bool DList<T>::update(int move, T val) {
     DLink<T> *p;
     p = head;
 	int pos = 0;
@@ -141,6 +141,7 @@ void DList<T>::update(int move, T val) {
         pos++;
     }
     p->value = val;
+	return true;
 }
 
 
