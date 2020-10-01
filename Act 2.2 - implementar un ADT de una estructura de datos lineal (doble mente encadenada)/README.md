@@ -1,6 +1,6 @@
 # Análisis de complejidad
 
-Laa listas doblemente ligadas contienen un puntero adicional, es decir un puntero previo, que junto con el puntero siguente permite que los datos queden de manera enlazada en la lista.
+Las listas doblemente ligadas contienen un puntero adicional, es decir un puntero previo, que junto con el puntero siguente permite que los datos queden de manera enlazada en la lista.
 
 ## add
 Análisis de complejidad temporal: El algoritmo recorre n pasos ya que usa un ciclo que recorre toda la lista desde su inicio hasta la posición final agregando un elemento, por lo que su complejidad es O(n) para el peor de los casos.
