@@ -11,7 +11,6 @@ private:
   void copiarArreglo(std::vector<T>&, std::vector<T>&, int, int);
   void arregloMerge(std::vector<T>&, std::vector<T>&, int, int, int);
 	void splitMerge(std::vector<T>&, std::vector<T>&, int, int);
-	int busqBin_aux(std::vector<T>&, int, int, int);
 public:
 	std::vector<T> ordenaSeleccion(std::vector<T>&);
 	std::vector<T> ordenaBurbuja(std::vector<T>&);
@@ -131,27 +130,24 @@ int Sorts<T>::busqSecuencial(std::vector<T> &prueba, int val) {
 
 // Busq Binaria ////////////////////////////////////////
 template <class T>
-int Sorts<T>::busqBin_aux(std::vector<T> &prueba, int low, int high, int val) {
+int Sorts<T>::busqBinaria(std::vector<T> &prueba, int val) {
 	int mid;
+	int low = 0;
+	int high = prueba.size() - 1;
 
-	if (low <= high){
-		mid = (high+low)/2;
-		if (val == prueba[mid]){
+	while (low < high) {
+		mid = (high + low) / 2;
+		if (val == prueba[mid]) {
 			return mid;
-		}
-		else if (val < prueba[mid]){
-			return busqBin_aux(prueba,low,mid-1,val);
-		}
-		else if (val > prueba[mid]){
-			return busqBin_aux(prueba,mid+1,high,val);
+		} 
+		else if (val < prueba[mid]) {
+			high = mid - 1;
+		} 
+		else if (val > prueba[mid]) {
+			low = mid + 1;
 		}
 	}
-	return low-1;
-}
-
-template <class T>
-int Sorts<T>::busqBinaria(std::vector<T> &prueba, int val) {
-	return busqBin_aux(prueba, 0, prueba.size()-1, val);
+	return low;
 }
 
 // Fin de la transmisión ////////////////////////////////////////
