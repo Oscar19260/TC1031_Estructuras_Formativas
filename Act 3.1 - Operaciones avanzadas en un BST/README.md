@@ -4,7 +4,7 @@
 Análisis de complejidad temporal: la función va a desplegar cada uno de los datos almacenados en el bst, preorder, inorder, postorder y level by level, y cada uno debe recorrer todos los datos del árbol, por lo que su complejidad es O(n) para el peor de los casos.
 
 ## height	
-Análisis de complejidad temporal: la función regresar la altura del árbol de búsqueda binaria por lo que debe recorrer el árbol, por lo que su nivel de complejidad es O(n) para el peor de los casos
+Análisis de complejidad temporal: la función regresar la altura del árbol de búsqueda binaria por lo que debe recorrer el árbol, por lo que su nivel de complejidad es O(n) para el peor de los casos.
 
 ## ancestors
 Análisis de complejidad temporal: la función va a desplegar los ancestros de un dato (todos los nodos arribas de n hasta llegar a la raiz) dependiendo de donde se encuentre debe recorrer el árbol, por lo que para el peor de los casos es O(n).
