@@ -466,10 +466,10 @@ std::string BST<T>::levelbylevel() const {
 template <class T>
 std::string BST<T>::visit() {
 	std::stringstream aux;		//Converitmos los datos en string
-	aux << preorder() << "\n";	//Se imprime preorder
-	aux << inorder() << "\n";	//Se imprime inorder
-	aux << postorder() << "\n";	//Se imprime postorder
-	aux << levelbylevel();		//Se imprime el nivel a nivel
+	aux << preorder() << "\n";	
+	aux << inorder() << "\n";	
+	aux << postorder() << "\n";	
+	aux << levelbylevel();		
 	return aux.str();			//Se regresan los datos en string
 }
 
