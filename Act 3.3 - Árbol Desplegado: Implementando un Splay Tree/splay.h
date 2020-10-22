@@ -13,6 +13,7 @@ class Node{
 private:
 	T value;
 	Node *left, *right, *parent;
+	unsigned int count;		//Cantidad datos
 	Node<T>* succesor();
 	Node<T>* zag(Node<T>*);
 	Node<T>* zig(Node<T>*);
@@ -328,6 +329,7 @@ template<class T>
 class SplayTree{
 private:
 	Node<T> *root;
+	unsigned int count;
 	
 public:
 	SplayTree();
@@ -337,6 +339,7 @@ public:
 	bool find(T);
 	void remove(T);
 	void removeAll();
+	int size() const;
 	std::string inorder() const;
 	std::string print_tree() const;
 	std::string preorder() const;
@@ -344,7 +347,7 @@ public:
 
 // Constructor de SplayTree ////////////////////////////
 template <class T>	
-SplayTree<T>::SplayTree():root(0) {}
+SplayTree<T>::SplayTree():root(0){}
 
 // Destructor de SplayTree ////////////////////////////
 template<class T>
@@ -355,13 +358,12 @@ SplayTree<T>::~SplayTree() {
 // Empty ////////////////////////////
 template<class T>
 bool SplayTree<T>::empty() const{
-	return (root == 0);
+	return (root == 0 && count == 0);
 }
 
 // Add ////////////////////////////
 template<class T>
 void SplayTree<T>::add(T val){
-	
 	if(root !=0){
 		Node<T>* added = root->add(val);
 		root = root->splay(root, added);
@@ -395,6 +397,7 @@ void SplayTree<T>::remove(T val){
 				root = root->splay(root, p);
 		}
 	}
+	count--;
 }
 
 // Remove All ////////////////////////////
@@ -405,6 +408,7 @@ void SplayTree<T>::removeAll(){
 	}
 	delete root;
 	root = 0;
+	count = 0;
 }
 	
 // Find ////////////////////////////
@@ -413,12 +417,18 @@ bool SplayTree<T>::find(T val){
 	if(root != 0){
 		Node<T>* found = root->find(val);
 		if (found == 0) return false;
-		root=root->splay(root, found);
+		root = root->splay(root, found);
 		return(root->value == val);
 	}
     else{
 		return false;
 	}
+}
+
+// Size //////////////////////////////////
+template <class T>
+int SplayTree<T>::size() const{
+	return count;			
 }
 
 // Inorder ////////////////////////////
