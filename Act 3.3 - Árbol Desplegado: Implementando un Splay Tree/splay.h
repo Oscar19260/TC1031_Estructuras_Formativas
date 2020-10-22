@@ -84,6 +84,7 @@ Node<T>* Node<T>::find(T val){
 		else
 			return this;
 	}
+	return 0;
 }	
 
 // Succesor ////////////////////////////
@@ -174,6 +175,7 @@ Node<T>* Node<T>::remove(T val){
 			}
 		}
 	}
+	return 0;
 }
 
 // Remove Childs ////////////////////////////
@@ -329,7 +331,7 @@ template<class T>
 class SplayTree{
 private:
 	Node<T> *root;
-	unsigned int count;
+	int count;
 	
 public:
 	SplayTree();
@@ -347,7 +349,9 @@ public:
 
 // Constructor de SplayTree ////////////////////////////
 template <class T>	
-SplayTree<T>::SplayTree():root(0){}
+SplayTree<T>::SplayTree():root(0){
+	count = -1;
+}
 
 // Destructor de SplayTree ////////////////////////////
 template<class T>
@@ -358,7 +362,7 @@ SplayTree<T>::~SplayTree() {
 // Empty ////////////////////////////
 template<class T>
 bool SplayTree<T>::empty() const{
-	return (root == 0 && count == 0);
+	return (root == 0);
 }
 
 // Add ////////////////////////////
@@ -371,6 +375,7 @@ void SplayTree<T>::add(T val){
     else{
 		root = new Node<T>(val);
 	}
+	count++;
 }
 	
 // Remove ////////////////////////////
