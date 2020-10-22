@@ -350,7 +350,7 @@ public:
 // Constructor de SplayTree ////////////////////////////
 template <class T>	
 SplayTree<T>::SplayTree():root(0){
-	count = -1;
+	count = 0;
 }
 
 // Destructor de SplayTree ////////////////////////////
