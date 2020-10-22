@@ -10,7 +10,7 @@ Análisis de complejidad temporal: la función elimina el dato del Splay Tree, p
 Análisis de complejidad temporal: la función regresa un valor boleano que representa si el dato que se desea encontrar existe o no, por lo que debe recorrer el arból y para el peor de los casos su nivel de complejidad es O(log(n)).
 
 ## inorder 
-Análisis de complejidad temporal: la función despliega en inorder (en orden) el contenido del Splay Tree, por lo que debe recorrer el árbol y su nivel de complejidad para el peor de los casos es O(log(n)).
+Análisis de complejidad temporal: la función despliega en inorder (en orden) el contenido del Splay Tree, por lo que debe recorrer el árbol y su nivel de complejidad para el peor de los casos es O(n).
 
 ## size
 Análisis de complejidad temporal: la función regresa la cantidad de datos que tiene el Splay Tree, por lo que su nivel de complejidad en el peor de los casos es O(1).
