@@ -47,15 +47,17 @@ void Graph::loadGraphList(string file, int nodos, int arcos){
     while(arch.good()){
         string x;
         string y;
-        getline(arch, x, ',');      
-        getline(arch, y, '\n');
-        x = x.substr(1, x.length()-1);  //Obtenemos los datos de la coordenada x
-        y = y.substr(1, y.length()-2);  //Obtenemos los datos de la coordenada y
-        int u = stoi(x);                //Los convertimos de string a int
-        int v = stoi(y);
-        // Metemos los datos en el grafo
-        adjList[u].push_back(v);
-        adjList[v].push_back(u);
+        getline(arch, x, ','); 
+		if (x != ""){
+			getline(arch, y, '\n');
+			x = x.substr(1, x.length()-1);  //Obtenemos los datos de la coordenada x
+			y = y.substr(1, y.length()-2);  //Obtenemos los datos de la coordenada y
+			int u = stoi(x);                //Los convertimos de string a int
+			int v = stoi(y);
+			// Metemos los datos en el grafo
+			adjList[u].push_back(v);
+			adjList[v].push_back(u);
+		}     
     }
 }
 
@@ -73,14 +75,16 @@ void Graph::loadGraphMat(string file, int nodos, int arcos){
         string x;
         string y;
         getline(arch, x, ',');
-        getline(arch, y, '\n');
-        x = x.substr(1, x.length()-1);  //Obtenemos los datos de la coordenada x
-        y = y.substr(1, y.length()-2);  //Obtenemos los datos de la coordenada y
-        int u = stoi(x);                //Los convertimos de string a int
-        int v = stoi(y);
-        // Metemos los datos en el grafo
-        adjMat[u][v] = 1;
-        adjMat[v][u] = 1;
+		if(x != ""){
+			 getline(arch, y, '\n');
+			x = x.substr(1, x.length()-1);  //Obtenemos los datos de la coordenada x
+			y = y.substr(1, y.length()-2);  //Obtenemos los datos de la coordenada y
+			int u = stoi(x);                //Los convertimos de string a int
+			int v = stoi(y);
+			// Metemos los datos en el grafo
+			adjMat[u][v] = 1;
+			adjMat[v][u] = 1;
+		}
     }
 }
 
